@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "food-court-c1e1c": {
+      "hosting": {
+        "foodcourt": [
+          "food-court-c1e1c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "food-court-c1e1c"
+  }
+}

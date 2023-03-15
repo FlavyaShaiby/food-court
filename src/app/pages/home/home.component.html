@@ -1,0 +1,349 @@
+
+
+
+
+    <html>
+      <head>
+
+
+        <!-- <style>
+
+          .LGLeeN-keyboard-shortcuts-view{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex}.LGLeeN-keyboard-shortcuts-view table,.LGLeeN-keyboard-shortcuts-view tbody,.LGLeeN-keyboard-shortcuts-view td,.LGLeeN-keyboard-shortcuts-view tr{background:inherit;border:none;margin:0;padding:0}.LGLeeN-keyboard-shortcuts-view table{display:table}.LGLeeN-keyboard-shortcuts-view tr{display:table-row}.LGLeeN-keyboard-shortcuts-view td{-moz-box-sizing:border-box;box-sizing:border-box;display:table-cell;color:#000;padding:6px;vertical-align:middle;white-space:nowrap}.LGLeeN-keyboard-shortcuts-view td .VdnQmO-keyboard-shortcuts-view--shortcut-key{background-color:#e8eaed;border-radius:2px;border:none;-moz-box-sizing:border-box;box-sizing:border-box;color:inherit;display:inline-block;font-family:Google Sans Text,Roboto,Arial,sans-serif;line-height:16px;margin:0 2px;min-height:20px;min-width:20px;padding:2px 4px;position:relative;text-align:center}
+          </style> -->
+
+
+
+
+<style>
+
+  .gm-control-active>img{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:focus>img:nth-child(1),.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1),.gm-control-active:disabled>img:nth-child(1){display:none}.gm-control-active:focus>img:nth-child(2),.gm-control-active:hover>img:nth-child(2){display:block}.gm-control-active:active>img:nth-child(3){display:block}.gm-control-active:disabled>img:nth-child(4){display:block}
+  
+  </style>
+
+
+
+
+      </head>
+      <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br><br><br>
+
+
+    
+    
+
+
+  
+       
+
+
+
+      
+      
+  
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+   
+ <head>
+
+
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>3d image slider</title>
+   <style media="screen">
+     body {
+   margin: 0;
+   background: #EEE;
+   user-select: none;
+   font-family: sans-serif;
+ }
+ 
+ 
+ #slider {
+   position: relative;
+   width: 900px;
+   height: 600px;
+   margin: 150px auto;
+   font-family: 'Helvetica Neue', sans-serif;
+   perspective: 1400px;
+   transform-style: preserve-3d;
+ }
+ 
+ input[type=radio] {
+   position: relative;
+   top: 108%;
+   left: 50%;
+   width: 18px;
+   height: 18px;
+   margin: 0 15px 0 0;
+   opacity: 0.4;
+   transform: translateX(-83px);
+   cursor: pointer;
+ }
+ 
+ 
+ input[type=radio]:nth-child(5) {
+   margin-right: 0px;
+ }
+ 
+ input[type=radio]:checked {
+   opacity: 1;
+ }
+ 
+ 
+ 
+ 
+ #slider label,
+ #slider label img {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   color: white;
+   font-size: 70px;
+   font-weight: bold;
+   border-radius: 3px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 400ms ease;
+ }
+ 
+ 
+ 
+ /* Slider Functionality */
+ 
+ /* Active Slide */
+ #s1:checked ~ #slide1,
+  #s2:checked ~ #slide2,
+   #s3:checked ~ #slide3,
+    #s4:checked ~ #slide4,
+     #s5:checked ~ #slide5 {
+   box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+   transform: translate3d(0%, 0, 0px);
+ }
+ 
+ /* Next Slide */
+ #s1:checked ~ #slide2,
+  #s2:checked ~ #slide3,
+   #s3:checked ~ #slide4,
+    #s4:checked ~ #slide5,
+     #s5:checked ~ #slide1 {
+   box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+   transform: translate3d(20%, 0, -100px);
+ }
+ 
+ 
+ /* Next to Next Slide */
+ #s1:checked ~ #slide3,
+  #s2:checked ~ #slide4,
+   #s3:checked ~ #slide5,
+    #s4:checked ~ #slide1,
+     #s5:checked ~ #slide2 {
+   box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+   transform: translate3d(40%, 0, -250px);
+ }
+ 
+ /* Previous to Previous Slide */
+ #s1:checked ~ #slide4,
+  #s2:checked ~ #slide5,
+   #s3:checked ~ #slide1,
+    #s4:checked ~ #slide2,
+     #s5:checked ~ #slide3 {
+   box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+   transform: translate3d(-40%, 0, -250px);
+ }
+ 
+ /* Previous Slide */
+ #s1:checked ~ #slide5,
+  #s2:checked ~ #slide1,
+   #s3:checked ~ #slide2,
+    #s4:checked ~ #slide3,
+     #s5:checked ~ #slide4 {
+   box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+   transform: translate3d(-20%, 0, -100px);
+ }
+ 
+ 
+   </style>
+ </head>
+ <body>
+
+
+  <div class="text" style="font-family: 'Brush Script MT', cursive;" >
+    <h1 style="font-size:70px;"><br>
+      &nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      For the love of delicious food.......</h1> <br>
+      <h2 style="font-size:70px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       Taste The Differences.......</h2><br>
+     </div>
+    
+     <section id="slider" style="margin-top: 0px;">
+   <input type="radio" name="slider" id="s1" checked>
+   <input type="radio" name="slider" id="s2">
+   <input type="radio" name="slider" id="s3">
+   <input type="radio" name="slider" id="s4">
+   <input type="radio" name="slider" id="s5">
+ 
+   <label for="s1" id="slide1"><img src="https://static.wixstatic.com/media/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg/v1/fill/w_1704,h_1125,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_97a68d95c3584eee8952b7b3184f5f80~mv2_d_6924_3840_s_4_2.jpg" alt=""></label>
+   <label for="s2" id="slide2"><img src="https://images.chinahighlights.com/allpicture/2019/03/65120264ca8449c79948d653_cut_800x500_9.jpg" alt=""></label>
+   <label for="s3" id="slide3"><img src="https://singaporelocalfavourites.com/wp-content/uploads/2018/08/singapore-western-food-recipes.jpg" alt=""></label>
+   <label for="s4" id="slide4"><img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></label>
+   <label for="s5" id="slide5"><img src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></label>
+ </section>
+ 
+ </body>
+ </html> 
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+        
+        
+
+
+
+
+
+      
+
+
+
+
+         <section class="wrapper">
+ <div class="title"> 
+  <p> EATOUT </p>
+  <h1> <span>OUR  </span> SPECIALS...... </h1>
+   </div>
+
+
+<div class="card">
+          <div class="container">
+            <div class="row">
+              <div class="col text-center mb-5">
+                 <!-- <h1 class="display-4">Food Corner</h1> -->
+          <p class="lead"> </p>
+              </div>
+            </div>
+          <div class="row">
+         <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://images.unsplash.com/flagged/photo-1556742524-750f2ab99913?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');">
+                 <img class="card-img " src="https://images.unsplash.com/flagged/photo-1556742524-750f2ab99913?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbmVzZSUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+                <div class="card-img-overlay d-flex flex-column">
+                 <div class="card-body">
+                    <small class="card-meta mb-2"></small>
+                    <h4 class="card-title mt-0 "><a class="text-white" routerLink="chinese">CHINEESE FOOD</a></h4>
+                   <small><i class="far fa-clock"></i> </small>
+                  </div>
+                  
+                </div>
+              </div></div>
+             <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+                 <img class="card-img d" src="https://images.unsplash.com/photo-1606471191009-63994c53433b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGluZGlhbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" height="625px">
+                <div class="card-img-overlay d-flex flex-column">
+                 <div class="card-body">
+                    <small class="card-meta mb-2"></small>
+                    <h4 class="card-title mt-0 "><a class="text-white" routerLink="indian">INDIAN FOOD</a></h4>
+                   <small><i class="far fa-clock"></i> </small>
+                  </div>
+                  
+                </div>
+              </div></div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+                 <img class="card-img " src="https://images.pexels.com/photos/5410418/pexels-photo-5410418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" height="625px">
+                <div class="card-img-overlay d-flex flex-column">
+                 <div class="card-body">
+                    <small class="card-meta mb-2"></small>
+                    <h4 class="card-title mt-0 "><a class="text-white" routerLink="kerala">KERALA FOOD</a></h4>
+                   <small><i class="far fa-clock"></i> </small>
+                  </div>
+                  
+                </div>
+              </div></div>
+           
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+                 <img class="card-img " src="https://images.unsplash.com/photo-1633896949673-1eb9d131a9b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGFyYWJpYyUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+                <div class="card-img-overlay d-flex flex-column">
+                 <div class="card-body">
+                    <small class="card-meta mb-2"></small>
+                    <h4 class="card-title mt-0 "><a class="text-white" routerLink="arabic">ARABIC FOOD</a></h4>
+                   <small><i class="far fa-clock"></i> </small>
+                  </div>
+                 
+                </div>
+              </div></div>
+             <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+                 <img class="card-img " src="https://www.thespruceeats.com/thmb/pRkqG_XtQYYc2HnNQSof8InwnRE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-90053856-588b7aff5f9b5874ee534b04.jpg" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" height="650px">
+                <div class="card-img-overlay d-flex flex-column">
+                 <div class="card-body">
+                    <small class="card-meta mb-2"></small>
+                    <h4 class="card-title mt-0 " ><a class="text-white"  style="color: darkred;" routerLink="icecream" >ICE-CREAM CORNER</a></h4>
+                   <small><i class="far fa-clock"></i> </small>
+                  </div>
+                 
+                </div>
+              </div></div>
+          <div class="col-sm-12 col-md-6 col-lg-4 mb-4"><div class="card text-white card-has-bg click-col" style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+                 <img class="card-img " src="https://images.unsplash.com/photo-1615478503562-ec2d8aa0e24e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGp1aWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?" height="650px">
+                <div class="card-img-overlay d-flex flex-column">
+                 <div class="card-body">
+                    
+                    <h4 class="card-title mt-0 "><a class="text-white" routerLink="juice">JUICE BARREL</a></h4>
+                   <small><i class="far fa-clock"></i> </small>
+                  </div>
+                 
+                </div>
+              </div></div>
+          
+        </div>
+          
+        </div></div>
+        </section> 
+
+  </body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+  

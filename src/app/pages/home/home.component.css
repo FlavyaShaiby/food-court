@@ -1,0 +1,72 @@
+
+
+   .wrapper {
+    margin: 10vh;
+  }
+
+
+
+
+
+.title{
+  margin-bottom: 10px;
+  padding-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+
+
+.title p{
+  color:#999;
+  font-style: italic;
+  font-weight: 700;
+  margin: 10px 20px;
+
+}
+
+.title h1{
+  font-size: 44px;
+  color: #131313;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.title h1 span{
+color: #fa0;
+}
+
+
+
+
+.text-h1{
+  text-decoration: #ea4848;
+}
+
+
+
+.card-img d:hover card-img d--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.card:hover .card__info {
+  background-color: transparent;
+  position: relative;
+}
+
+.card:hover .card__info-hover {
+  opacity: 1;
+}
+
+
+.text-h1{
+  font-size: 70px;
+}
+
+
+
+
+
+
+.card{
+  margin-bottom: 7.2rem;
+}

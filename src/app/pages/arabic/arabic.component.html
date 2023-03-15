@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col col-lg-4" *ngFor="let item of arabic">
+        <div class="card">
+            <img src="{{item.image}}" class="card-img-top" height="350" width="350">
+            <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <h5 class="card-title">{{item.price}}</h5>
+            <a (click)="gotoHere(item.id)" class="btn btn-primary" href="order">place order</a>
+            </div>
+        </div>
+    </div>
+</div>
+

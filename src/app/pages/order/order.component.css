@@ -1,0 +1,42 @@
+.row mb-4{
+    background-image: url('https://img.freepik.com/free-photo/chicken-wings-barbecue-sweetly-sour-sauce-picnic-summer-menu-tasty-food-top-view-flat-lay_2829-6471.jpg');
+}
+
+.order{
+background-image: url('https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_960_720.jpg');
+margin-left: auto;
+    margin-right: auto;
+}
+.form-label{
+    color: rgb(252, 252, 246);
+}
+.form-control{
+    color: black;
+}
+.order{
+    border: 2px solid rgb(17, 16, 16);
+  padding: 70px;
+  
+  height: 900px;
+  width: 900px;
+  border-radius: 25px;
+  border-color: #ddd;
+}
+
+
+
+
+
+
+.a{
+    
+    background: #ddd;
+  }
+
+
+  .card{
+    margin-bottom: 55.2rem;
+}
+.order{
+    margin-top: 4.5rem;
+}
