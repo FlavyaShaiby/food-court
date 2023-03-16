@@ -64,30 +64,6 @@ span{
 }
  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -156,19 +132,6 @@ body {
       display: block;
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -319,5 +282,5 @@ color: #fa0;
   margin-bottom: 7.2rem;
 }
 .about{
-  margin-top: 6.2rem;
+  margin-top: 5.2rem;
 }
